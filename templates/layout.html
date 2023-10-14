@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><a href="#">Logo</a></div>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+ <!-- Footer content -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>Brand Info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Details</h3>
+        <p>Email: example@example.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+      </div>
+      <div class="footer-section">
+          <h3>Useful Resources</h3>
+          <ul>
+            <li><a href="#">Resource 1</a></li>
+            <li><a href="#">Resource 2</a></li>
+            <li><a href="#">Resource 3</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Useful Links</h3>
+          <ul class="li-none">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+      </div>
+    </footer>
+</body>
+</html>
